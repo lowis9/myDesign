@@ -1,0 +1,287 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #24d4c9;
+  --main-transition: .5s
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-seri;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000
+}
+h1,h2,h3 {
+  margin: 0
+}
+.blank {
+  position: absolute;
+  top: -3rem;
+  left: -6rem;
+  z-index: -1000;
+  opacity: .3;
+  animation: up-and-down 3cs linear infinite;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+      width: 970px
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px
+  }
+}
+/* Header */
+.top-bar {
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  padding: 13px 0;
+}
+.top-bar h2 {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #256b69;
+  display: inline-block;
+}
+.top-bar a{
+  color: #fff
+}
+.top-bar i::before {
+  animation: back-move 2s linear infinite;
+}
+.landing{
+  position: relative
+}
+.landing::before {
+  content:"";
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 2rem - 30px);
+  background: rgb(250,250,250);
+  background: linear-gradient(90deg, rgba(250,250,250,0) 0%, rgba(238,238,238,0) 51%, rgba(0,213,255,0.165703781512605) 100%);
+  z-index: -1;
+}
+@media (max-width: 760px) {
+  .landing::before {
+    background:none
+  }
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 2rem;
+}
+nav .logo-i {
+  color: var(--main-color);
+  margin-right: 5px;
+  animation: flipt 2s linear infinite
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li:not(:last-child) {
+  margin-right: 1.2rem
+}
+nav ul li a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: var(--main-transition);
+  box-shadow: 10px 10px transparent
+}
+nav ul li a.sected,
+nav ul li a:hover {
+  color: #fff;
+  background-color: #000;
+  box-shadow: 10px 10px  var(--main-color);
+}
+.mumber-holder {
+  margin-top: 10%;
+}
+.mumber-holder h2 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+.mumber-plan {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.4rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+@media (max-width: 760px) {
+  .mumber-plan {
+    grid-template-columns: unset
+  }
+}
+.mumber-plan .plan {
+  position: relative;
+  border: 3px solid ;
+  border-radius: 13px;
+  width: 350px;
+  height: 300px;
+  transition: var(--main-transition);
+  cursor: pointer
+}
+.mumber-plan .plan:nth-child(1) {
+  border-color: #ffabdc;
+}
+.mumber-plan .plan:nth-child(3) {
+  border-color: #b591fd;
+}
+.mumber-plan .plan.slec {
+  height: 350px;
+  border-color: #000;
+  box-shadow: 10px 10px  #000;
+}
+.mumber-plan .plan:hover{
+  border-color: #000;
+  box-shadow: 10px 10px  #000;
+}
+
+.mumber-plan .plan h3 {
+  border-radius: 10px 10px 0 0;
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+}
+.mumber-plan .plan h3:nth-child(1) {
+  background-color: #ffabdc;
+}
+.mumber-plan .plan:nth-child(2) h3 {
+  background-color: #ffcc70;
+}
+.mumber-plan .plan:nth-child(3) h3 {
+  background-color: #b591fd;
+}
+.mumber-plan .plan .holder {
+  padding: 0.9rem 1.2rem;
+}
+.mumber-plan .plan .price {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.mumber-plan .plan .discount {
+  color: #e9e9e9;
+  font-size: 3rem;
+  text-decoration: line-through;
+  margin-left: 1rem;
+}
+.mumber-plan .holder .month {
+  color: #575757d7;
+  margin-bottom: 1rem;
+}
+.mumber-plan .holder p {
+  margin: 0;
+  line-height: 1.5;
+  color: #6c6c6c;
+}
+.mumber-plan .holder p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.mumber-plan .holder .save {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.mumber-plan .holder .slected {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: black;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+}
+.pay {
+  position: relative;
+  margin: 70px auto;
+  display: flex;
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: #000;
+  border-radius: 5px;
+  transition: var(--main-transition);
+  box-shadow: 10px 10px var(--main-color);
+  cursor: pointer
+}
+.pay:hover {
+  box-shadow: 10px 10px #ffcc70;
+}
+.pay::before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  left: -60px;
+  background-image: url(../img/arrow-with-scribble.png);
+  background-size: 50px;
+  width: 50px;
+  height: 50px;
+}
+.call {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.call i {
+  margin: 0 5px;
+}
+/* Animation */
+@keyframes back-move {
+  0%,100% {
+    margin-left: 10px;
+  }
+  50% {
+    margin-left: 5px;
+  }
+}
+@keyframes flipt {
+  0%, 100% {
+    transform: rotate(360deg)
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes up-and-down {
+  0%, 100% {
+      top: -3rem;
+  }
+  50% {
+      top: -2rem
+  }
+}
