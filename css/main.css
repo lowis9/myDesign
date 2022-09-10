@@ -29,7 +29,7 @@ h1,h2,h3 {
   left: -6rem;
   z-index: -1000;
   opacity: .3;
-  animation: up-and-down 3cs linear infinite;
+  animation: up-and-down 3s linear infinite;
 }
 .container {
   padding-left: 15px;
@@ -97,6 +97,13 @@ nav {
   align-items: center;
   justify-content: space-between;
   margin: 1.5rem 2rem;
+}
+@media (max-width: 630px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
 }
 nav .logo-i {
   color: var(--main-color);
@@ -195,7 +202,7 @@ nav ul li a:hover {
   writing-mode: vertical-lr;
   position: absolute;
   right: 10px;
-  top: 0;
+  top: -2px;
   padding-bottom: 1rem;
   font-weight: lighter;
 }
