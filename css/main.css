@@ -66,6 +66,7 @@ h1,h2,h3 {
   padding-bottom: 5px;
   border-bottom: 3px solid #256b69;
   display: inline-block;
+  
 }
 .top-bar a{
   color: #fff
@@ -141,6 +142,7 @@ nav ul li a:hover {
 .mumber-holder h2 {
   font-size: 2.4rem;
   text-align: center;
+  font-weight: 900
 }
 .mumber-plan {
   position: relative;
