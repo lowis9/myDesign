@@ -130,6 +130,12 @@ nav ul li a {
   transition: var(--main-transition);
   box-shadow: 10px 10px transparent
 }
+@media (max-width: 480px){
+  nav ul li a {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
 nav ul li a.selcted,
 nav ul li a:hover {
   color: #fff;
