@@ -229,6 +229,7 @@ nav ul li a:hover {
   margin: 0;
   line-height: 1.5;
   color: #6c6c6c;
+  font-weight: 600;
 }
 .mumber-plan .holder p:last-of-type {
   margin-bottom: 1rem;
